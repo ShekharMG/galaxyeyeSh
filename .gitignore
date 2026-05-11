@@ -35,3 +35,11 @@ Thumbs.db
 # ── Logs ──
 *.log
 training_log.txt
+data/ 
+*.tif 
+*.png 
+*.jpg 
+*.h5 
+*.pth 
+*.zip 
+*.zip 
