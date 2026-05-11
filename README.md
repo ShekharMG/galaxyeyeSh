@@ -3,6 +3,8 @@
 Binary pixel-level change detection between pre-event RGB electro-optical (EO) imagery and post-event grayscale Synthetic Aperture Radar (SAR) imagery using a Siamese UNet architecture.
 
 ---
+## Model Weights
+Download from: https://drive.google.com/drive/folders/1eIp9UF7Qp9Cvrvi9hDytvxMX5lYwZW7B?usp=sharing
 
 ## Project Description
 
