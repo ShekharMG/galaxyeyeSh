@@ -1,0 +1,33 @@
+# Configuration for SAR-EO Change Detection
+# ============================================
+
+# Data paths
+data_root: "./"  # Root directory containing train/val/test folders
+
+# Image settings
+image_size: 128       # Reduced to 128x128 for ultra-fast CPU training
+
+# Training hyperparameters
+batch_size: 16
+epochs: 10            # Increased to 10 epochs for better convergence on CPU
+lr: 0.0003            # Learning rate for AdamW
+optimizer: adamw
+scheduler: cosine     # Cosine annealing LR schedule
+loss: dice_bce        # Combined Dice + weighted BCE
+
+# Class imbalance handling
+pos_weight: auto      # 'auto' computes from dataset; or set a float manually
+
+# Model architecture
+encoder: resnet18     # Switched to a much smaller/faster backbone
+pretrained: true      # Use ImageNet pretrained weights
+
+# Reproducibility
+seed: 42
+
+# Augmentations (applied during training only)
+augmentations:
+  horizontal_flip: true
+  vertical_flip: true
+  rotation: 90                # Random 90-degree rotations
+  brightness_contrast: true   # Applied to EO (pre-event) images ONLY
